@@ -1,4 +1,4 @@
-public class ShiftedBinarySearch {
+public class BinarySearch {
 
     public static int search(int[] arr, int l, int h, int target){
         if(l<h){
