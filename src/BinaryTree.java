@@ -137,9 +137,9 @@ public class BinaryTree {
         TreeNode y=lca(root.right, p, q);
         if(x!=null && y!=null)
             return root;
-        if(x==null || y==null)
+        if(x==null && y==null)
             return null;
-        else return root;
+        else return (x!=null) ? x : y;
     }
 
 }
