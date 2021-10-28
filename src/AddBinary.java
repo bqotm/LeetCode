@@ -57,6 +57,8 @@ public class AddBinary {
             }
             j--;
         }
+        if(d!=0)
+            stringBuilder.append(d);
         return stringBuilder.reverse().toString();
     }
 
