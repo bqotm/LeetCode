@@ -33,4 +33,26 @@ public class RotateArray {
                 break;
         }
     }
+
+
+    //reverse nums then reverse the first k elements and finally the n-k left elements
+    public void rotateII(int[] nums, int k) {
+        if(nums.length==1)
+            return;
+        k=k%nums.length;
+        reverse(nums, 0, nums.length-1);
+        reverse(nums, 0, k-1);
+        reverse(nums, k, nums.length-1);
+    }
+
+    public static void reverse(int[] nums, int i, int j){
+        int tmp;
+        while(i<j){
+            nums[i]=nums[i]^nums[j];
+            nums[j]=nums[i]^nums[j];
+            nums[i]=nums[i]^nums[j];
+            j--;
+            i++;
+        }
+    }
 }
