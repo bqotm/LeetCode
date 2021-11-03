@@ -2,6 +2,7 @@ public class DiameterOfBinaryTree {
 
 
 
+
     public int diameterOfBinaryTree(TreeNode root) {
         if(root==null)
             return 0;
