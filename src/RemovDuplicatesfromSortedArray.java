@@ -1,5 +1,3 @@
-package TopEasyInterviewQuestions;
-
 import java.util.Arrays;
 
 public class RemovDuplicatesfromSortedArray {

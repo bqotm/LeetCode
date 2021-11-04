@@ -1,5 +1,3 @@
-package TopEasyInterviewQuestions;
-
 public class NumberswithEvenNumberofdigits {
 
     public int findNumbers(int[] nums) {
