@@ -1,3 +1,4 @@
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.PriorityQueue;
@@ -51,7 +52,7 @@ public class Huffman {
         for(Map.Entry<Character, Integer> entry: freq_map.entrySet()){
             System.out.println(entry.getKey()+" "+entry.getValue()+" ");
         }
-        PriorityQueue<Node> priorityQueue=new PriorityQueue<>(message.length(),(a,b)->a.frequency-b.frequency);
+        PriorityQueue<Node> priorityQueue=new PriorityQueue<>(message.length(), Comparator.comparingInt(a -> a.frequency));
         for(Map.Entry<Character, Integer> entry: freq_map.entrySet()){
             priorityQueue.add(new Node(entry.getKey(), entry.getValue()));
         }
