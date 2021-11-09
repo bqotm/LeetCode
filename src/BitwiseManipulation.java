@@ -4,10 +4,21 @@ public class BitwiseManipulation {
 
     public static boolean isPowerof2(int x){
 
-        if(x!=0 && ((x&(x-1))==0))
+        /*if(x!=0 && ((x&(x-1))==0))
             return true;
-        return false;
+        return false;*/
 
+        return x>0 &&((x&(x-1))==0);
+
+    }
+
+    public int hammingWeight(int n) {
+        int s=0;
+        while(n!=0){
+            n=n&(n-1);
+            s++;
+        }
+        return s;
     }
 
     public static int rightMost1(int x){
