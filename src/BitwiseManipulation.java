@@ -21,6 +21,10 @@ public class BitwiseManipulation {
         return s;
     }
 
+
+
+
+
     public static int rightMost1(int x){
         return x^(x&(x-1));
     }
@@ -29,7 +33,7 @@ public class BitwiseManipulation {
         int a=10>>2;
         //System.out.println(a);
         //System.out.println(isPowerof2(15));
-        String x="1000";
+        /*String x="1000";
         int dec_x=Integer.parseInt(x,2);
         String x_1=Integer.toString(dec_x-1,2);
         int dec_x_1=Integer.parseInt(x_1, 2);
@@ -39,7 +43,13 @@ public class BitwiseManipulation {
         System.out.println(dec_x_1+" "+x_1);
         System.out.println(res+" "+re);
         System.out.println(dec_x^res);
-        System.out.println(rightMost1(24));
+        System.out.println(rightMost1(24));*/
+
+        int mask=1<<8;
+        String mas=Integer.toString(mask, 2);
+        System.out.println(mas);
+        System.out.println(mask);
+
     }
 
 
