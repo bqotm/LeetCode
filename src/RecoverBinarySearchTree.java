@@ -23,7 +23,7 @@ public class RecoverBinarySearchTree {
             p=tmp;
             q=root;
         }
-        if(tmp.val>root.val && p!=null){
+        if(tmp.val>root.val && p==null){
             q=root;
         }
         tmp=root;
