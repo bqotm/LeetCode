@@ -45,7 +45,7 @@ public class BitwiseManipulation {
         System.out.println(dec_x^res);
         System.out.println(rightMost1(24));*/
 
-        int mask=1<<8;
+        int mask=1<<5;
         String mas=Integer.toString(mask, 2);
         System.out.println(mas);
         System.out.println(mask);
