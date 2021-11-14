@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Searcha2DMatrix {
 
 
@@ -15,7 +17,8 @@ public class Searcha2DMatrix {
             if(i>=m)
                 return false;
         }
-        while (x<=y){
+        return (Arrays.binarySearch(matrix[i], target)>=0);
+        /*while (x<=y){
             int middle=x+(y-x)/2;
             if(matrix[i][middle]>target){
                 y=middle-1;
@@ -26,7 +29,7 @@ public class Searcha2DMatrix {
                 return true;
             }
         }
-        return false;
+        return false;*/
     }
 
 }
