@@ -8,21 +8,26 @@ public class CousinsBinaryTree {
 
 
     public boolean isCousins(TreeNode root, int x, int y) {
+        if(root==null)   return false;
         Queue<TreeNode> queue=new LinkedList<>();
         queue.add(root);
         int depth=0;
         int dx=-2,dy=-1;
+        TreeNode X=null,Y=null;
         while(!queue.isEmpty()){
-            List<Integer> level=new ArrayList<>();
             int s=queue.size();
             for(int i=0; i<s; i++){
                 TreeNode curr=queue.poll();
-                if(curr.val==x)
+                if(curr.val==x){
                     dx=depth;
-                if(curr.val==y)
+                    X=curr;
+                }
+                if(curr.val==y){
                     dy=depth;
+                    Y=curr;
+                }
                 if(dx==dy){
-                    return !isSiblings(root, x, y);
+                    return !isSiblings(root, X, Y);
                 }
                 if(curr.left!=null){
                     queue.add(curr.left);
@@ -38,10 +43,10 @@ public class CousinsBinaryTree {
 
     }
 
-    public boolean isSiblings(TreeNode root, int a, int b){
+    public boolean isSiblings(TreeNode root, TreeNode a, TreeNode b){
         if(root==null)
             return false;
-        return (root.right.val==a && root.left.val==b) || (root.right.val==b && root.left.val==a) || isSiblings(root.left, a, b) || isSiblings(root.right, a, b);
+        return (root.right==a && root.left==b) || (root.right==b && root.left==a) || isSiblings(root.left, a, b) || isSiblings(root.right, a, b);
 
     }
 
