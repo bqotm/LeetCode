@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
+import java.util.*;
 
 public class BinaryTree {
 
@@ -42,6 +39,21 @@ public class BinaryTree {
         return list;
     }
 
+    public void iterative_inorder(TreeNode root){
+
+        Stack<TreeNode> stack=new Stack<>();
+        if(root==null)
+            return;
+        while(root!=null || !stack.isEmpty()){
+            while(root!=null){
+                stack.push(root);
+                root=root.left;
+            }
+            root=stack.pop();
+            //
+            root=root.right;
+        }
+    }
 
 
 
