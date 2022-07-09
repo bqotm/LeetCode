@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/LeetCode.iml" filepath="$PROJECT_DIR$/LeetCode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Misc(non related to LC)/Misc(non related to LC).iml" filepath="$PROJECT_DIR$/Misc(non related to LC)/Misc(non related to LC).iml" />
+    </modules>
+  </component>
+</project>
